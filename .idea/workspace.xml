@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="af751d4e-01de-4cc7-8c8a-2490a0ec2610" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Klasifikasi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Klasifikasi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banaclass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pisang/A.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pisang/Genderuwo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pisang/Kepok.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pisang/cavendish.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pisang/tanduk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/versi3.keras" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="30HQOGyLlBVTKXbHfhyNhqSMb6r" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/IT_riski/python bru/_klasifikasi"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="af751d4e-01de-4cc7-8c8a-2490a0ec2610" name="Changes" comment="" />
+      <created>1753281984290</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1753281984290</updated>
+    </task>
+    <servers />
+  </component>
+</project>
