@@ -17,7 +17,7 @@ st.set_page_config(
 # --- Fungsi untuk Memuat Model ---
 @st.cache_resource
 def load_keras_model():
-    model_path = '../../../IT riski/python bru/pythonProject2/versi3.keras'  # Pastikan file ini ada di direktori kerja
+    model_path = 'versi3.keras'  # Pastikan file ini ada di direktori kerja
     model = load_model(model_path)
     return model
 
