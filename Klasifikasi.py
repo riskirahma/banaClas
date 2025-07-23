@@ -174,7 +174,7 @@ elif menu == "Jenis Pisang":
             "description": "Pisang Cavendish adalah jenis pisang yang paling umum secara internasional. Pisang ini dikenal karena bentuknya yang ramping, warna kuning cerah saat matang, dan teksturnya yang lembut. Selain enak dimakan langsung, Cavendish juga sering digunakan dalam smoothies, pancake, dan berbagai kue karena rasanya yang manis."
         },
         "Pisang Genderuwo": {
-            "image": "pisang/genderuwo.jpg",
+            "image": "pisang/Genderuwo.jpg",
             "description": "Pisang Genderuwo merupakan varietas lokal yang cukup unik. Pisang ini memiliki kulit berwarna kemerahan atau kehitaman dan bentuk yang sedikit lebih besar. Teksturnya padat dan aroma khasnya membuatnya digemari di daerah tertentu. Biasanya pisang ini diolah terlebih dahulu sebelum dikonsumsi."
         },
         "Pisang Kepok": {
