@@ -74,24 +74,29 @@ if menu == "Home":
         st.subheader("Unggah Gambar Pisang Anda")
         uploaded_file = st.file_uploader("", type=["jpg", "jpeg", "png"])
 
-        # Simpan file sementara
         if uploaded_file:
             st.image(uploaded_file, caption='Gambar Terunggah', use_container_width=True)
             with open("temp_image.jpg", "wb") as f:
                 f.write(uploaded_file.getbuffer())
 
-            # Tombol klasifikasi
             if st.button("Lakukan Klasifikasi"):
                 predictions = predict_banana_type("temp_image.jpg", model)
+                
+                # --- SISTEM ERROR BARU ---
+                confidence_threshold = 0.85 # Tentukan ambang batas keyakinan
                 predicted_class_index = np.argmax(predictions)
-                predicted_class = banana_classes[predicted_class_index]
-                confidence = predictions[predicted_class_index] * 100
+                confidence = predictions[predicted_class_index]
 
-                st.success(f"**Jenis Pisang Terprediksi:** {predicted_class}")
-                st.info(f"**Keyakinan (Confidence):** {confidence:.2f}%")
-
-                # Simpan prediksi di session_state agar bisa dipakai di col2
-                st.session_state["predictions"] = predictions
+                if confidence > confidence_threshold:
+                    predicted_class = banana_classes[predicted_class_index]
+                    st.success(f"**Jenis Pisang Terprediksi:** {predicted_class}")
+                    st.info(f"**Keyakinan (Confidence):** {confidence*100:.2f}%")
+                    st.session_state["predictions"] = predictions
+                else:
+                    st.error("Gambar yang diunggah tampaknya **bukan gambar pisang**. Silakan coba unggah gambar pisang.")
+                    if "predictions" in st.session_state:
+                         del st.session_state["predictions"] # Hapus data prediksi sebelumnya
+                # --- AKHIR SISTEM ERROR BARU ---
 
     with col2:
         if "predictions" in st.session_state:
@@ -101,7 +106,7 @@ if menu == "Home":
                 "Jenis Pisang": banana_classes,
                 "Probabilitas": predictions
             })
-            fig, ax = plt.subplots(figsize=(10, 6))  # Ukuran grafik tetap
+            fig, ax = plt.subplots(figsize=(10, 6))
             ax.barh(df["Jenis Pisang"], df["Probabilitas"], color='gold')
             ax.set_xlabel("Probabilitas")
             ax.set_xlim(0, 1)
@@ -110,7 +115,6 @@ if menu == "Home":
                 ax.text(v + 0.01, i, f"{v:.2f}", va='center')
             st.pyplot(fig)
 
-            # Tabel eksplisit di bawah grafik
             st.write("Tabel Probabilitas:")
             st.dataframe(df.style.format({"Probabilitas": "{:.2%}"}))
 
